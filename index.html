@@ -1,52 +1,85 @@
+
 <!DOCTYPE html>
 <html lang="en-us">
 	<head>
-		<title>Aelly Liu Portfolio</title>
+		<title>Aelly Liu Portolio</title>
 		<meta charset="UTF-8">
-		<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-		<!-- <link rel="stylesheet" type="text/css" href="assets/css/style.css"> -->
-		<link rel="stylesheet" type="text/css" href="assets/css/style_rigid.css">
+		<!-- viewport let the page know the width of view device-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		 <link rel="stylesheet" href="assets/css/stickyfooter.css">
+		 <link rel="stylesheet" href="assets/css/style.css">
 
-		<!-- <link rel="stylesheet" type="text/css" href="assets/css/stickyfooter.css"> -->
 	</head>
-
+	
 	<body>
-		<header>
-			<h1>Aelly Liu</h1>
+			    <!-- Fixed navbar -->
+	    <nav class="navbar navbar-default navbar-fixed-top">
+	      <div class="container">
+	        <div class="navbar-header">
+	          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+	            <span class="sr-only">Toggle navigation</span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	          </button>
+	          <a class="navbar-brand brandname" href="index.html">Aelly Liu</a>
+	        </div>
+	        <div id="navbar" class="collapse navbar-collapse">
+	          <ul class="nav navbar-nav navbar-right">
+	            <li class="active"><a href="index.html">About</a></li>
+	            <li><a href="portfolio.html">Portfolio</a></li>
+	            <li><a href="contact.html">Contact</a></li>
+	          </ul>
+	        </div><!--/.nav-collapse -->
+	      </div>
+	    </nav>
 
-		</header>
-		<nav>
-			|<a href="index.html">About</a>
-			|<a href="portfolio.html">Portfolio</a>
-			<a href="contact.html">Contact</a>
-		</nav>
+
+			    <!-- Begin page content -->
+
+		<div class="container">
+
+			<div class="row">
+				<div class="col-md-8">
+			      <div class="page-header">
+			        <h2>About Me</h2>
+			      </div>
+			      		<div class="row">
+			      			<div class="col-md-4">
+								<img class="mainimage" src="assets/images/AboutMePlaceHolder.jpg">
+							</div>
+							<div class="col-md-8">
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam tempus consequat elementum. Sed non quam sodales, maximus libero a, blandit arcu. Sed faucibus fermentum lacus ac vehicula. Morbi porttitor eros ante, sed gravida metus sagittis a. Mauris ultricies est bibendum ex egestas, ac rhoncus eros aliquam. Sed rutrum lacinia dui, non aliquam mi condimentum at. Ut vitae vulputate turpis, at lobortis ipsum.
+								</p>
+								<p>
+									Mauris tempor cursus molestie. Maecenas luctus in eros hendrerit lobortis. Etiam sed sem tincidunt, bibendum metus eget, mattis ante. Aenean placerat neque sed vestibulum pellentesque. Quisque consequat accumsan massa sed consequat. Nulla dignissim dolor ut purus mattis rhoncus. Suspendisse pulvinar nisl id urna pellentesque, at varius orci semper. Morbi quam justo, porttitor ac ipsum in, hendrerit vestibulum odio.
+								</p>
+							</div>
+						</div>
+				</div>
+
+				<div class="col-md-4">
+					<div class="page-header">
+			        	<h2>Connect with Me</h2>
+			      	</div>
+					<img class="logo" src="assets/images/githubLogoR.png" alt="gihub logo">
+					<img class="logo" src="assets/images/linkedinLogoR.png" alt="Linkedin logo">
+					<img class="logo" src="assets/images/stackoverflowLogoR.png" alt="stackoverflow logo">
+
+				</div>
+
+			</div><!--close row div -->
+	    </div>
+
+
+	    <footer class="footer">
+	      <div class="container">
+	        <p class="text-muted">&copy; Copyright 2016 Aelly Liu</p>
+	      </div>
+	    </footer>
 		
-		<div id="wrapper">
-			<section>
-				<h2>About Me</h2>
-				<hr>
-				<img src="assets/images/AboutMePlaceHolder.jpg">
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam tempus consequat elementum. Sed non quam sodales, maximus libero a, blandit arcu. Sed faucibus fermentum lacus ac vehicula. Morbi porttitor eros ante, sed gravida metus sagittis a. Mauris ultricies est bibendum ex egestas, ac rhoncus eros aliquam. Sed rutrum lacinia dui, non aliquam mi condimentum at. Ut vitae vulputate turpis, at lobortis ipsum.
-				</p>
-				<p>
-					Mauris tempor cursus molestie. Maecenas luctus in eros hendrerit lobortis. Etiam sed sem tincidunt, bibendum metus eget, mattis ante. Aenean placerat neque sed vestibulum pellentesque. Quisque consequat accumsan massa sed consequat. Nulla dignissim dolor ut purus mattis rhoncus. Suspendisse pulvinar nisl id urna pellentesque, at varius orci semper. Morbi quam justo, porttitor ac ipsum in, hendrerit vestibulum odio.
-				</p>
-			</section>
-			
-			<aside>
-				<h2>Connect with Me</h2>
-				<hr>
-				<img src="assets/images/githubLogoR.png" alt="gihub logo">
-				<img src="assets/images/linkedinLogoR.png" alt="Linkedin logo">
-				<img src="assets/images/stackoverflowLogoR.png" alt="stackoverflow logo">
-			</aside>
-		</div>
-
-		<footer>
-			<h5>&copy; Copyright 2016 Aelly Liu</h5>
-		</footer>
-
 	</body>
 
 </html>
