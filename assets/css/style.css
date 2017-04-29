@@ -1,93 +1,107 @@
-* {
-	color: #777777;
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
 }
-
-
 body {
-  background-image: url("../images/asanoha-400px.png");
-  font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+  /* Margin bottom by footer height */
+  margin-bottom: 90px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 90px;
+  text-align:center;
 
 }
 
-h1, h2{
-	font-family: 'Georgia', Times, Times New Roman, serif;
-	color:#4aaaa5;
+
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+body > .container-fluid {
+  padding: 60px 15px 0;
+}
+.container-fluid .text-muted {
+  margin: 20px 0;
 }
 
-.logo{
-
-	width:20%;
-	height:auto;
-	margin:0 5px;
+.footer > .container-fluid {
+  padding-right: 15px;
+  padding-left: 15px;
 }
 
-.mainimage
-{
-	width:100%;
-	height:auto;
-
+code {
+  font-size: 80%;
 }
 
-.brandname{
-
-	font-weight: bold;
-    font-size: 32px;
-    font-family: 'Georgia', Times, Times New Roman, serif;
-    position:absolute;
-    left:10%;
-
+.jumbotron {
+    text-align: center;
+    background-color: transparent;
+    margin-bottom: 0;
+    padding-top:0;
+    padding-bottom: 0;
 }
 
-.containerwhite{
-	background:#fff;
-}
-
-
-/*contact*/
-
-input{
-	width:100%;
-	margin:10px 0;
-}
-
-.submitBtn{
-	 width: 100px;
-    height: 30px;
-    background-color: #4aaaa5;
-    color: #fff;
-    border: 0;
-    font-size: 16px;
-
-}
-
-.submitBtn:hover{
-	/*border-color:#86FFDF;*/
-	box-shadow:0 0 20px #86FFDF;
-
-}
-
-textarea{
-	width:100%;
-	height:150px;
-	border-color:#bbb;
-	margin:10px 0;
-}
-
-/*portfolio*/
-
-.imageHolder{
-	position:relative;
-}
-
-label{
-	background-color: #4aaaa5;
-	color:#fff;;
+.row{
 	text-align: center;
-	width:100%;
-    position: absolute;
-    left: 0;
-    bottom:5%;
-    padding:15px 0;
+	margin-bottom:20px;
+}
 
+body{
+
+background: -moz-linear-gradient(top, rgba(158,180,255,1) 0%, rgba(191,205,255,0.95) 9%, rgba(181,218,255,0.9) 18%, rgba(178,232,255,0.86) 25%, rgba(242,252,255,0.77) 40%, rgba(255,255,255,0.4) 100%);
+background: -webkit-linear-gradient(top, rgba(158,180,255,1) 0%,rgba(191,205,255,0.95) 9%,rgba(181,218,255,0.9) 18%,rgba(178,232,255,0.86) 25%,rgba(242,252,255,0.77) 40%,rgba(255,255,255,0.4) 100%);
+background: linear-gradient(to bottom, rgba(158,180,255,1) 0%,rgba(191,205,255,0.95) 9%,rgba(181,218,255,0.9) 18%,rgba(178,232,255,0.86) 25%,rgba(242,252,255,0.77) 40%,rgba(255,255,255,0.4) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9eb4ff', endColorstr='#66ffffff',GradientType=0 );
+
+background-repeat: no-repeat;
 
 }
+
+#bkimg {
+    position: absolute;
+    right: 0;
+    bottom: 8%;
+    z-index: -1;
+}
+
+
+#guessword, #gussedChar{
+    width: 250px;
+    height: 40px;
+    background: rgba(255,255,255,0.6);
+    border-color: #eee;
+    border-style: solid;
+    border-width: 2px;
+    margin: 0 auto;
+    padding-top:8px;
+    font-size:20px;
+    letter-spacing:2px;
+
+}
+
+#hangman{
+  height:250px;
+  width:auto;
+  margin-bottom:15px;
+}
+
+#gussedChar{
+  letter-spacing: 5px;
+  width:280px;
+}
+
+h1{
+  /*outline:3px solid #ffd118;*/
+/*  -webkit-text-fill-color: rgba(255,255,255,0.1);
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #1d4720;*/
+  font-family: 'Shrikhand', cursive;
+
+}
+
