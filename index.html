@@ -1,14 +1,15 @@
 <!--
-Javascript Homework
-Hangman Game
-4/25/2017 - intial build
+Week 4 homework
+RPG Game
+start 5/2/2017
 
+Develop by Aelly Liu
 -->
 
 <!DOCTYPE html>
 <html lang="en-us">
 	<head>
-		<title>Hangman Game</title>
+		<title>RPG-Game</title>
 		<meta charset="UTF-8">
 		<!-- viewport let the page know the width of view device-->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,99 +17,67 @@ Hangman Game
 		<link rel="stylesheet" href="./assets/css/reset.css">
 		<!-- Latest compiled and minified CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-		<link href="https://fonts.googleapis.com/css?family=Shrikhand" rel="stylesheet">
+
 		<link rel="stylesheet" href="./assets/css/style.css">
+
 
 	</head>
 	
 	<body>
-
-		<div class="container-fluid">
-			<div class="jumbotron">
-
-				<h1>HANGMAN GAME</h1>
-
-				<div class="row">
-					<!-- Game Instructin Section -->
-					<div class="col-md-6 col-md-offset-3 alert alert-info" role="alert" id ="instruction">
-						<strong>Press space bar to start</strong>
-					</div>
-				</div> <!-- close row -->
-					
+		<div class="container">
+			<div class="row">
+				<h1>Doctor Who Battle</h1>
 			</div>
-		
 
 			<div class="row">
-				<!-- Score Section -->
-				<div class="col-md-2 col-md-offset-1">
-					<div class="panel panel-info">
-				  		<div class="panel-heading">
-				    		<h3 class="panel-title">Score:</h3>
-						</div>
-						<div class="panel-body">
+				<dvi class="col-md-8 col-md-offset-2" id="instruction">
+					Please Pick a Character
+				</dvi>
+			</div> <!--close instruction row-->
 
-						    <ul class="list-group">
-							  <li class="list-group-item">
-							    <span id="win" class="badge">0</span>
-							    Win
-							  </li>
-							  <li class="list-group-item">
-							    <span id="loss" class="badge">0</span>
-							    Loss
-							  </li>
-							</ul>
+			<div class="row">
+				<div class="col-md-12" id="displayCharacters">
+				
+				</div>
+			</div><!--close choose characters row-->
 
-						</div>
-					</div>
+			<!-- display if the user lose or win the game -->
+			<div class="row">
+				<dvi class="col-md-8 col-md-offset-2" id="gameStatus">
+				</dvi>
+			</div><!--close game status row-->
+
+			
+			<div class="row">
+				<div class="col-md-3 col-md-offset-2" id="yourPlayer">
+				
+				</div> <!--close your player column-->
+
+				<div class="col-md-1">
+					<p>V.S.</p>
+				</div>
+				
+				<div class="col-md-4" id="enemy">
 				</div>
 
-				<!--Main hangman game section-->
-				<div class="col-md-4 col-md-offset-1">
-					<!-- <div > -->
-						<img src="./assets/image/hangman11.png" id="hangman">
-					<!-- </div> -->
-				
-
-					<div class="row">
-						<!-- <div class="well well-lg"> -->
-							<div id="guessword"></div>
-						<!-- </div> -->
-					</div> <!--close row-->
-
-					<div class="row">
-						<!-- <div class="well well-sm"> -->
-							<h4>Guessed Letters: </h4>
-							<div id="gussedChar"></div>
-						<!-- </div> -->
-
-					</div> <!--close row-->
-
-
+			</div><!--close fighting row-->
+			
+			<div class="row">
+				<div class="col-md-4 col-md-offset-4">
+					<button type="button" class="btn btn-primary" id="attackBtn">Attack</button>
 				</div>
-
 				
+			</div><!--close attack button row-->
+		
 
-			</div> <!--close first row -->
-
-			<div><img id="bkimg" src="./assets/image/zoo_tp.png"></div>
-
-			<footer class="footer">
-		      <div class="container">
-		        <p class="text-muted">&copy; Copyright 2017 Aelly Liu</p>
-		      </div>
-		    </footer>
-
-		</div>
-
-
-
-
+		</div> <!-- close container -->
+	
 				<!-- jQuery library -->
 		<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 		<!-- Latest compiled and minified JavaScript -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-		<script src="./assets/javascript/hangman.js"></script>
-		
+		<script src="./assets/javascript/game.js"></script>
 	</body>
 
 </html>
+

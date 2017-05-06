@@ -1,107 +1,59 @@
-/* Sticky footer styles
--------------------------------------------------- */
-html {
-  position: relative;
-  min-height: 100%;
-}
-body {
-  /* Margin bottom by footer height */
-  margin-bottom: 90px;
-}
-.footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  /* Set the fixed height of the footer here */
-  height: 90px;
-  text-align:center;
-
-}
-
-
-/* Custom page CSS
--------------------------------------------------- */
-/* Not required for template or sticky footer method. */
-
-body > .container-fluid {
-  padding: 60px 15px 0;
-}
-.container-fluid .text-muted {
-  margin: 20px 0;
-}
-
-.footer > .container-fluid {
-  padding-right: 15px;
-  padding-left: 15px;
-}
-
-code {
-  font-size: 80%;
-}
-
-.jumbotron {
-    text-align: center;
-    background-color: transparent;
-    margin-bottom: 0;
-    padding-top:0;
-    padding-bottom: 0;
-}
-
-.row{
+*{
 	text-align: center;
-	margin-bottom:20px;
+	color:black;
+	box-sizing: border-box;
+
+	font-kerning: 2px;
+
 }
 
 body{
+	background-color: #032030;
+	background-image:url("../images/doctorwho.jpg");
 
-background: -moz-linear-gradient(top, rgba(158,180,255,1) 0%, rgba(191,205,255,0.95) 9%, rgba(181,218,255,0.9) 18%, rgba(178,232,255,0.86) 25%, rgba(242,252,255,0.77) 40%, rgba(255,255,255,0.4) 100%);
-background: -webkit-linear-gradient(top, rgba(158,180,255,1) 0%,rgba(191,205,255,0.95) 9%,rgba(181,218,255,0.9) 18%,rgba(178,232,255,0.86) 25%,rgba(242,252,255,0.77) 40%,rgba(255,255,255,0.4) 100%);
-background: linear-gradient(to bottom, rgba(158,180,255,1) 0%,rgba(191,205,255,0.95) 9%,rgba(181,218,255,0.9) 18%,rgba(178,232,255,0.86) 25%,rgba(242,252,255,0.77) 40%,rgba(255,255,255,0.4) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9eb4ff', endColorstr='#66ffffff',GradientType=0 );
-
-background-repeat: no-repeat;
 
 }
-
-#bkimg {
-    position: absolute;
-    right: 0;
-    bottom: 8%;
-    z-index: -1;
-}
-
-
-#guessword, #gussedChar{
-    width: 250px;
-    height: 40px;
-    background: rgba(255,255,255,0.6);
-    border-color: #eee;
-    border-style: solid;
-    border-width: 2px;
-    margin: 0 auto;
-    padding-top:8px;
-    font-size:20px;
-    letter-spacing:2px;
-
-}
-
-#hangman{
-  height:250px;
-  width:auto;
-  margin-bottom:15px;
-}
-
-#gussedChar{
-  letter-spacing: 5px;
-  width:280px;
-}
-
 h1{
-  /*outline:3px solid #ffd118;*/
-/*  -webkit-text-fill-color: rgba(255,255,255,0.1);
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: #1d4720;*/
-  font-family: 'Shrikhand', cursive;
+	font-size:4em;
+	-webkit-text-stroke-width: 2px;
+	-webkit-text-stroke-color: #ddd;
+}
+
+#instruction{
+	font-size: 2em;
+	text-shadow:0 0 8px #fff;
+}
+
+.characDisplay{
+	float:left;
+	border-color: #ddd;
+	border-width: 2px;
+	border-style: solid;
+	/*padding:5px 15px;*/
+	min-width: 150px;
+	font-size:18px;
+}
+
+button{
+	background-color: rgba(255,255,255,0);
+	color:black;
+	letter-spacing: 2px;
+	text-shadow:0 0 12px #fff;
+}
+
+.row{
+	margin:0 auto 2% auto;
 
 }
 
+p{
+	font-size:3em;
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-color: white;
+	
+}
+#gameStatus{
+	text-shadow:0 0 8px #fff;
+	font-size: 25px;
+	background-color:rgba(200,200,200,0.6);
+}
