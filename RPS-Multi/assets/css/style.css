@@ -49,9 +49,16 @@ div{
 	min-height:100px;
 	border-radius:10px;
 }
+
+#roundResult div{
+	text-align:center;
+	font-style:italic;
+	font-size:20px;
+}
 #instruction{
 	text-align: center;
 }
+
 h2{
 	font-size: 3em;
 }
@@ -60,7 +67,8 @@ h2{
 	border-color:black;
 }
 .yourturn{
-	border-color:rgb(255,184,0) !important;
+	border-color:rgb(255,201,85) !important;
+	box-shadow:0 0 20px rgb(255,174,0);
 }
 
 .jumbotron{
@@ -74,4 +82,23 @@ h2{
 .panel-heading{
 	background-color:rgb(134,189,248) !important;
 	
+}
+
+.player1msg{
+	color:rgb(38,112,28);
+
+}
+
+.player2msg{
+	color:rgb(134,70,11);
+
+}
+
+i{
+	font-style: italic;
+}
+
+.lead{
+	text-shadow:0 0 10px rgb(255,168,168);
+	font-size:30px;
 }

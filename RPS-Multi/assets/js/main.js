@@ -87,7 +87,7 @@ playersRef.on("child_added", function(snapshot) {
 	//put in chat message that a player has enter the game
 		if(snapshot.val().name)
 		{
-			$("#chat-display").append("<div>"+snapshot.val().name + " is in the game</div>");
+			$("#chat-display").append("<div><i>"+snapshot.val().name + " is in the game</i></div>");
 		}
 
 
@@ -95,7 +95,7 @@ playersRef.on("child_added", function(snapshot) {
 playersRef.on("child_removed", function(snapshot) {
 	//put in chat message that a player has enter the game
 
-		$("#chat-display").append(snapshot.val().name + " has left the game<br>");
+		$("#chat-display").append("<div><i>"+snapshot.val().name + " has left the game</i></div>");
 
 		chatRef.child(chatkey).remove();
 		
@@ -109,6 +109,14 @@ database.ref("/chats").on("child_added", function(snapshot){
 			if(chatmsg)
 			{
 				var entry=$("<div>").html(chatname+": "+chatmsg);
+				if(chatname===player1.name)
+				{
+					entry.addClass("player1msg");
+				}else if(chatname===player2.name)
+				{
+					entry.addClass("player2msg");
+				}
+
 				$("#chat-display").append(entry);
 			}
 
@@ -135,7 +143,7 @@ database.ref("/result").on("value", function(snapshot){
 	round=snapshot.child("round").val();
 	if(round > 0)
 	{
-		$("#roundResult").html("<h1>Round: "+round+"</h1><p class=\"lead\">"+snapshot.child("result").val()+"</p>");
+		$("#roundResult").html("<h1>Round "+round+"</h1><p class=\"lead\">"+snapshot.child("result").val()+"</p>");
 	}
 
 });
@@ -201,10 +209,13 @@ $("#addPlayer").click(function(){
 $("#msgSend").click(function(){
 	event.preventDefault();
 
-	var msg=$("#chat-input").val().trim();
-	chatkey=chatRef.push().key;
-	chatRef.child(chatkey).set({name:thisPlayer,msg:msg});
-	$("#chat-input").val("");
+	if(thisPlayer !=="")
+	{
+		var msg=$("#chat-input").val().trim();
+		chatkey=chatRef.push().key;
+		chatRef.child(chatkey).set({name:thisPlayer,msg:msg});
+		$("#chat-input").val("");
+	}
 
 });
 
@@ -263,35 +274,35 @@ function rpsChecks(){
       playersRef.child("/1/tie").set(player1.tie);
       player2.tie++;
       playersRef.child("/2/tie").set(player2.tie);
-      database.ref("/result").set({round:round, result:"It's a Tie!"});
+      database.ref("/result").set({round:round, result:"It's a Tie!<div>"+player1.name+" picked "+player1.choice+"</div><div>"+player2.name+" picked "+ player2.choice+"</div>"});
 
     }else if(player1.choice === "Rock" && player2.choice === "Paper"){
       player1.loss++;
       playersRef.child("/1/loss").set(player1.loss);
       player2.win++;
       playersRef.child("/2/win").set(player2.win);
-      database.ref("/result").set({round:round, result:"Winner is "+player2.name});
+      database.ref("/result").set({round:round, result:"The winner is "+player2.name+"<div>"+player1.name+" picked "+player1.choice+"</div><div>"+player2.name+" picked "+ player2.choice+"</div>"});
 
     }else if(player1.choice === "Scissors" && player2.choice === "Rock"){
       player1.loss++;
       playersRef.child("/1/loss").set(player1.loss);
       player2.win++;
       playersRef.child("/2/win").set(player2.win);
-      database.ref("/result").set({round:round, result:"Winner is "+player2.name});
+      database.ref("/result").set({round:round, result:"The winner is "+player2.name+"<div>"+player1.name+" picked "+player1.choice+"</div><div>"+player2.name+" picked "+ player2.choice+"</div>"});
 
     }else if(player1.choice === "Paper" && player2.choice ==="Scissors"){
       player1.loss++;
       playersRef.child("/1/loss").set(player1.loss);
       player2.win++;
       playersRef.child("/2/win").set(player2.win);
-      database.ref("/result").set({round:round, result:"Winner is "+player2.name});
+      database.ref("/result").set({round:round, result:"The winner is "+player2.name+"<div>"+player1.name+" picked "+player1.choice+"</div><div>"+player2.name+" picked "+ player2.choice+"</div>"});
 
     }else{
       player1.win++;
       playersRef.child("/1/win").set(player1.win);
       player2.loss++;
       playersRef.child("/2/loss").set(player2.loss);
-      database.ref("/result").set({round:round, result:"Winner is "+player1.name});
+      database.ref("/result").set({round:round, result:"The winner is "+player1.name+"<div>"+player1.name+" picked "+player1.choice+"</div><div>"+player2.name+" picked "+ player2.choice+"</div>"});
     }
 
     database.ref().child("/turn").set(1);
